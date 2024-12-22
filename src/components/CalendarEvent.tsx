@@ -27,7 +27,13 @@ export function CalendarEvent({ title, top, height, left, width, onClick, isSele
       <h3 className="font-semibold text-sm truncate">{title}</h3>
       <p className="text-xs text-muted-foreground truncate">Sample Location</p>
       {isSelected && (
-        <InfoBox event={event} />
+        <InfoBox 
+        event={event}
+        onClose={(e) => {
+          e?.stopPropagation();
+          onClick(e as React.MouseEvent<HTMLDivElement>);
+        }} 
+         />
       )}
     </div>
   );
