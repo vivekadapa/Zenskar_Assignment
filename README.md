@@ -1,50 +1,47 @@
-# React + TypeScript + Vite
+# Calendar App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + TypeScript application built with Vite.
 
-Currently, two official plugins are available:
+## Sample Input 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+ ```bash  
+  const sampleEvents: CalendarEventType[] = [
+    { title: 'Sample Item', start: 10, end: 90 },
+    { title: 'Sample Item', start: 20, end: 80 },
+    { title: 'Sample Item', start: 70, end: 180 },
+    { title: 'Sample Item', start: 90, end: 180 },
+    { title: 'Sample Item', start: 200, end: 270 },
+    { title: 'Sample Item', start: 230, end: 290 },
+    { title: 'Sample Item', start: 300, end: 340 },
+    { title: 'Sample Item', start: 350, end: 400 },
+    { title: 'Sample Item', start: 370, end: 580 },
+    { title: 'Sample Item', start: 410, end: 480 },
+    { title: 'Sample Item', start: 450, end: 590 },
+    { title: 'Sample Item', start: 500, end: 595 },
+    { title: 'Sample Item', start: 530, end: 590 },
+    { title: 'Sample Item', start: 600, end: 660 },
+    { title: 'Sample Item', start: 650, end: 690 },
+    { title: 'Sample Item', start: 670, end: 710 }
+];
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Output
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+![image](https://github.com/user-attachments/assets/6e93faf3-0c1d-4657-b7e7-625dd005281a)
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+
+## Installation and Setup
+
+Follow these steps to get the project running locally:
+
+### Steps to Install
+1. **Clone the Repository**:
+   ```bash  
+   git clone https://github.com/vivekadapa/Zenskar_Assignment.git
+   cd Zenskar_Assignment
+2. **Install Dependencies**:
+   ```bash  
+   npm install
+4. **Run Project**:
+    ```bash  
+   npm run dev
